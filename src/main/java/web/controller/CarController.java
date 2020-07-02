@@ -26,7 +26,6 @@ public class CarController {
 
     @GetMapping
     public String listCars(ModelMap model, @RequestParam("locale") String locale) {
-        System.out.println(locale);
         List<Car> cars = this.carService.listCars();
         if (locale.equals("en")) {
             model.addAttribute("tableHeader", EN);
